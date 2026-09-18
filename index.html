@@ -11,6 +11,19 @@
     <script src='main.js'></script>
 </head>
 <body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('mainNav');
+
+        if (toggle && nav) {
+            toggle.addEventListener('click', function () {
+                nav.classList.toggle('show');
+                toggle.classList.toggle('open');
+            });
+        }
+    });
+</script>
 <section class="sec1">
     <div class="container">
         <div class="row">
@@ -20,15 +33,22 @@
                 </div>
             </div>
             <div class="col-sm-9">
-                <div class="inbox22">
-                <a href="" class="yy">Home</a>
-                <a href="" class="yy">About</a>
-                <a href="" class="yy">Courses</a>
-                <a href="" class="yy">Trainers</a>
-                <a href="" class="yy">Events</a>
-                <a href="" class="yy">Drop down</a>
-                <a href="" class="yy">Contact</a>
-                <a href="" class="uu">Get started</a>
+                <div class="nav-wrapper">
+                    <button class="menu-toggle" type="button" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="inbox22" id="mainNav">
+                        <a href="" class="yy">Home</a>
+                        <a href="" class="yy">About</a>
+                        <a href="" class="yy">Courses</a>
+                        <a href="" class="yy">Trainers</a>
+                        <a href="" class="yy">Events</a>
+                        <a href="" class="yy">Drop down</a>
+                        <a href="" class="yy">Contact</a>
+                        <a href="" class="uu">Get started</a>
+                    </div>
                 </div>
             </div>
         </div>
